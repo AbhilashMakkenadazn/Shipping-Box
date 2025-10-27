@@ -1,0 +1,96 @@
+/* BoxList table styling */
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 15px;
+}
+
+.card th,
+.card td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.card th {
+    background: #f7f9fb;
+    font-weight: 600;
+    color: #333;
+}
+
+.card tr:hover {
+    background-color: #f9fbff;
+    transition: background 0.2s;
+}
+
+/* Colour preview */
+.color-box {
+    width: 40px;
+    height: 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 6px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+/* Empty state */
+.card td[colspan] {
+    text-align: center;
+    color: #666;
+    padding: 1rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .card table,
+    .card thead,
+    .card tbody,
+    .card th,
+    .card td,
+    .card tr {
+        display: block;
+    }
+
+    .card thead tr {
+        display: none;
+    }
+
+    .card tr {
+        margin-bottom: 1rem;
+        background: #fdfdfd;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .card td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .card td::before {
+        content: attr(data-label);
+        flex-basis: 40%;
+        font-weight: 600;
+        color: #333;
+        text-align: left;
+    }
+
+    .card td:last-child {
+        border-bottom: none;
+    }
+
+    .color-box {
+        width: 28px;
+        height: 18px;
+    }
+}

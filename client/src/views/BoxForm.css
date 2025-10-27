@@ -1,0 +1,202 @@
+.card {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 1.8rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input,
+select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #fafafa;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.error-input {
+    border-color: #e63946 !important;
+    background-color: #fff6f6;
+}
+
+.error-text {
+    color: #e63946;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+button.save {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 11px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+button.save:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+button.save:active {
+    transform: translateY(0);
+}
+
+
+.color-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-inputs input[type="color"] {
+    width: 50px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .card {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 14px;
+    }
+
+    .color-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .color-inputs input[type="text"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    button.save {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+.color-box {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.color-box:hover {
+    transform: scale(1.08);
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Focused or active state */
+.color-box:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+.color-box::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 12px;
+}
+
+.color-box::-webkit-color-swatch {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+@keyframes colorPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+}
+
+.color-box:active {
+    animation: colorPulse 1s ease infinite alternate;
+}
+
+.color-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
